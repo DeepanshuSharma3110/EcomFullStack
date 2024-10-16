@@ -13,12 +13,14 @@ import OrderRought from './src/order/orderRought.js';
 const app = express();
 //middleware 
 dotenv.config();
-app.use(cors(
-{
-    origin:*,
-    credentials: true
-}
-));
+
+app.use(cors({
+    origin: (origin, callback) => {
+        callback(null, true); // Allow all origins
+    },
+    credentials: true,
+}));
+
 
 
 const __dirname = path.resolve();
