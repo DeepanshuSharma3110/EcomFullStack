@@ -1,0 +1,272 @@
+/* 
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--dark_color);
+    color: var(--text_color);
+}
+
+nav a {
+    margin: 0 2rem;
+    color: var(--text_color);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+nav a:hover {
+    color: var(--secondary_color);
+}
+
+header .navBtn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text_color);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul ul {
+    display: none;
+    position: absolute;
+    background-color: var(--dark_color);
+}
+
+ul li:hover > ul,
+.submenu {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+ul li ul li {
+    padding: 1rem 2rem;
+}
+
+ul li ul li a {
+    font-size: 1.6rem;
+}
+
+@media only screen and (max-width:768px) {
+    header .navBtn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--dark_color);
+        transition: 1s;
+        transform: translateY(-200vh);
+    }
+
+    header .responsive_nav {
+        transform: none;
+    }
+
+    nav .navCloseBtn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    ul ul {
+        display: none;
+    }
+
+    .submenu {
+        display: block;
+        text-align: center;
+        padding: 0;
+        background-color: var(--dark_color);
+    }
+} */
+/* Enhanced Navbar Styling */
+
+/* General header styles */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--dark_color);
+    color: var(--text_color);
+}
+
+/* Navbar logo */
+header h3 {
+    font-size: 2rem;
+    margin: 0;
+    cursor: pointer;
+    color: var(--text_color);
+}
+
+/* Navigation link styles */
+nav a {
+    margin: 0 2rem;
+    color: var(--text_color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary_color);
+}
+
+/* Hamburger menu button */
+header .navBtn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text_color);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+    transition: opacity 0.3s ease;
+}
+
+/* Navbar styles */
+header nav {
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/* Responsive dropdown menu */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul ul {
+    display: none;
+    position: absolute;
+    background-color: var(--dark_color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    z-index: 100;
+}
+
+ul li:hover > ul,
+.submenu {
+    display: block;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+ul li ul li {
+    padding: 1rem 2rem;
+    white-space: nowrap;
+}
+
+ul li ul li a {
+    font-size: 1.6rem;
+    color: var(--text_color);
+    transition: color 0.3s ease;
+}
+
+ul li ul li a:hover {
+    color: var(--secondary_color);
+}
+
+/* Media Queries for responsive design */
+@media only screen and (max-width: 768px) {
+    /* Show the hamburger menu button */
+    header .navBtn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Full-screen mobile menu */
+    header nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--dark_color);
+        transition: transform 0.5s ease;
+        transform: translateY(-200vh);
+        z-index: 999;
+    }
+
+    /* Show the menu when toggled */
+    header .responsive_nav {
+        transform: none;
+    }
+
+    /* Close button styling */
+    nav .navCloseBtn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem;
+        color: var(--text_color);
+    }
+
+    /* Hide dropdowns initially */
+    ul ul {
+        display: none;
+    }
+
+    /* Centered submenu for mobile */
+    .submenu {
+        display: block;
+        text-align: center;
+        padding: 0;
+        background-color: var(--dark_color);
+    }
+
+    /* Adjust navigation links for mobile view */
+    nav a {
+        font-size: 2rem;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Additional transitions and effects */
+nav {
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease;
+}
+
+nav a {
+    transition: color 0.3s ease;
+}
+
+/* Submenu hover effect */
+ul li ul li:hover {
+    background-color: var(--hover_bg_color);
+    border-radius: 4px;
+}

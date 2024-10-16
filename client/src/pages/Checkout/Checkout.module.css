@@ -1,0 +1,119 @@
+:root {
+    --dark_color: #1995AD;
+    --medium_color: #A1D6E2;
+    --light_color: #F1F1F2;
+    --text_color: #333;
+    --secondary_color: #d52929;
+}
+
+/* Base styles */
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 800px; /* Limit max width for larger screens */
+    margin: auto;
+}
+
+.addressConteiner {
+    background-color: var(--light_color); /* Light background for the address section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.addressConteiner h3 {
+    margin-bottom: 10px;
+    color: var(--text_color);
+}
+
+.addressConteiner span {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: var(--dark_color); /* Dark color for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    background-color: var(--secondary_color); /* Change to secondary color on hover */
+}
+
+.ProductContainer {
+    background-color: var(--medium_color); /* Medium background for the product section */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    margin-bottom: 15px;
+}
+
+.item span {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    color: var(--text_color); /* Text color */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .main {
+        padding: 10px;
+    }
+
+    .addressConteiner {
+        padding: 15px;
+    }
+
+    .addressConteiner span {
+        flex-direction: column; /* Stack label and value vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .ProductContainer {
+        padding: 15px;
+    }
+
+    .item {
+        margin-bottom: 10px; /* Reduce spacing */
+    }
+
+    button {
+        width: 100%; /* Full-width buttons */
+        margin-bottom: 10px; /* Spacing between buttons */
+    }
+
+    .paymentMode {
+        display: flex;
+        flex-direction: column; /* Stack payment buttons vertically */
+    }
+
+    .paymentMode button {
+        width: 100%; /* Full-width payment buttons */
+        margin-bottom: 10px; /* Spacing between payment buttons */
+    }
+}
+
+@media (min-width: 601px) {
+    .paymentMode {
+        display: flex;
+        justify-content: space-between; /* Space payment buttons evenly on larger screens */
+    }
+
+    .paymentMode button {
+        width: 48%; /* Slightly less than half-width buttons */
+    }
+}

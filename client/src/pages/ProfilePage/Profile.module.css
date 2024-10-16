@@ -1,0 +1,110 @@
+.main {
+    max-width: 100vw;
+    background-color: var(--background_color); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0; 
+}
+
+.container {
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 20px auto;
+    background-color: var(--white_color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+.selector {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border_color); 
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    flex-wrap: wrap; 
+}
+
+.list {
+    color: var(--text_color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, transform 0.3s; 
+    text-align: center; 
+}
+
+.list:hover {
+    color: var(--secondary_color);
+    transform: scale(1.05); 
+}
+
+.bodyContainer {
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: var(--light_color);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionConteiner {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--white_color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%; 
+        margin: 10px auto;
+        padding: 1rem;
+    }
+
+    .list {
+        font-size: 1rem; 
+        padding: 0.3rem 0.5rem;
+    }
+
+    .bodyContainer {
+        padding: 1rem; 
+        margin: 0.5rem 0;
+    }
+
+    .optionConteiner {
+        padding: 0.5rem; 
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .list {
+        padding: 0.5rem;
+        width: 100%;
+        font-size: 0.9rem; 
+    }
+
+    .container {
+        padding: 0.5rem;
+    }
+
+    .bodyContainer {
+        padding: 0.5rem; 
+    }
+}

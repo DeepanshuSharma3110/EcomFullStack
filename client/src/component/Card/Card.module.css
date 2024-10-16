@@ -1,0 +1,41 @@
+.card{
+    max-width: 250px;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid var(--dark_color);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;  
+}
+
+.card:hover{
+    background-color: var( --light_color);
+}
+.image{
+
+    width: 200px;
+    margin: 5px auto;
+    padding: 1rem;
+}
+
+.title{
+    color: var(--text_color);
+    text-transform: capitalize;
+    font-size: larger;
+}
+.price{
+    color: var(--text_color);
+    font-size: x-large;
+}
+button{
+    padding: 1rem;
+    border: none;
+    font-size: large;
+    background: transparent;
+}
+
+
+button:hover{
+/* color: var(--secondary_color); */
+color: white;
+}

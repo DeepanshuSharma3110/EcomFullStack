@@ -1,0 +1,142 @@
+/* Main container styles */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--background_color);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Cart container */
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--white_color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+h2, h3 {
+    margin-bottom: 1rem;
+    color: var(--text_color);
+    text-align: center;
+}
+
+/* Table wrapper for responsiveness */
+.tableWrapper {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Ensures horizontal scrolling for small screens */
+}
+
+thead {
+    background-color: var(--light_color);
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border_color);
+    color: var(--text_color);
+}
+
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Table rows */
+tbody tr:hover {
+    background-color: var(--hover_color);
+}
+
+td img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Quantity button styles */
+td button {
+    background-color: var(--primary_color);
+    color: var(--white_color);
+    border: none;
+    padding: 0.3rem 0.6rem;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* Button styles */
+button {
+    background-color: var(--primary_color);
+    color: var(--white_color);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: var(--secondary_color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    table, th, td {
+        font-size: 0.9rem;
+    }
+
+    td img {
+        width: 40px;
+        height: 40px;
+    }
+
+    button {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h2, h3 {
+        font-size: 1.2rem;
+    }
+
+    th, td {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    td img {
+        width: 30px;
+        height: 30px;
+    }
+
+    button {
+        padding: 0.8rem;
+    }
+}

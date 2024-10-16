@@ -1,0 +1,18 @@
+/* Hex codes: #1995AD, #A1D6E2, #F1F1F2 */
+
+:root{
+    --dark_color:#1995AD;
+    --medium_color:#A1D6E2;
+    --light_color:#F1F1F2;
+    --text_color:#333;
+    --secondary_color:#d52929;
+}
+
+*{
+padding: 0;
+margin: 0;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+box-sizing: border-box;
+color: #333;
+}
+

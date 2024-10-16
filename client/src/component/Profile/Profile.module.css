@@ -1,0 +1,115 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px; /* Limits the width on larger screens */
+  }
+  
+  .right img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .left,
+  .right {
+    flex: 1;
+  }
+  
+  .left {
+    display: grid;
+    gap: 15px;
+  }
+  
+  .left span {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* Makes sure labels and inputs are aligned */
+    align-items: center;
+  }
+  
+  .left label {
+    font-weight: bold;
+    text-align: right; /* Align labels to the right */
+  }
+  
+  .left input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .address {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .address span {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* Ensures alignment for address fields */
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .address label {
+    font-weight: bold;
+    text-align: right; /* Align labels to the right */
+  }
+  
+  .address input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stacks the image and form vertically */
+      align-items: center;
+    }
+  
+    .right img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .left span, .address span {
+      grid-template-columns: 1fr; /* Full width for smaller screens */
+    }
+  
+    .left input, .address input {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main {
+      margin: 10px;
+    }
+  
+    .left span, .address span {
+      grid-template-columns: 1fr;
+      flex-direction: column; /* Stack label and input vertically */
+      align-items: flex-start;
+    }
+  
+    .left input, .address input {
+      width: 100%; /* Full width for small mobile screens */
+    }
+  }
+  
